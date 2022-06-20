@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
 
-class MyAdapter(private val myContext: Context, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm)  {
+class TablayoutAdapter(fm: FragmentManager, private val totalTabs: Int) : FragmentPagerAdapter(fm)  {
     // this is for fragment tabs
     override fun getItem(position: Int): Fragment {
         when (position) {

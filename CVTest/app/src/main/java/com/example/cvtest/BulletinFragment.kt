@@ -28,10 +28,10 @@ class BulletinFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
 
         var listUser = arrayListOf<User>()
-        listUser.add(User("You", "Second"))
+        listUser.add(User("You", "23 Maret 2022 - 00:41 WIB","Algebra Theory 1","25 Maret 2022 - 00:01 WIB","Pellentesque ut tellus luctus, fermentum justo quis, lobortis mi. Praesent volutpat odio non neque iaculis condimentum. Aenean arcu leo, sollicitudin vel pulvinar vel, fermentum ut dolor","4 Attachments"))
+        listUser.add(User("You", "23 Maret 2022 - 00:41 WIB","Algebra Theory 1","25 Maret 2022 - 00:01 WIB","Pellentesque ut tellus luctus, fermentum justo quis, lobortis mi. Praesent volutpat odio non neque iaculis condimentum. Aenean arcu leo, sollicitudin vel pulvinar vel, fermentum ut dolor","1 Module"))
 
-
-        var adapter : RecyclerAdapter = RecyclerAdapter(listUser)
+        var adapter = RecyclerAdapter(listUser)
         recyclerView.layoutManager = LinearLayoutManager(view.context)
 
         recyclerView.setHasFixedSize(true)

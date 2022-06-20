@@ -7,93 +7,97 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/_83sdp"
-        android:layout_height="@dimen/_83sdp"
+        android:id="@+id/img_avatar"
+        android:layout_width="@dimen/_78sdp"
+        android:layout_height="@dimen/_78sdp"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="@dimen/_155sdp"
+        android:id="@+id/txt_title"
+        android:layout_width="@dimen/_165sdp"
         android:layout_height="@dimen/_35sdp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="63dp"
-        android:text="@string/title_first"
+        android:layout_marginTop="55dp"
+        android:text="@string/txt_title"
         android:textStyle="bold"
         android:textSize="@dimen/_20ssp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/img_avatar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt_title_code"
         android:layout_width="@dimen/_62sdp"
         android:layout_height="@dimen/_20sdp"
         android:layout_marginTop="10dp"
         android:textSize="@dimen/_11sdp"
-        android:text="@string/title_second"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:text="@string/txt_code"
+        app:layout_constraintStart_toStartOf="@+id/txt_title"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        android:layout_marginTop="49dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_title"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_svg1" />
+        app:srcCompat="@drawable/ic_edit" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_copy"
         android:layout_width="@dimen/_10sdp"
         android:layout_height="@dimen/_17sdp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/ic_svg2" />
+        app:layout_constraintStart_toEndOf="@+id/txt_title_code"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:srcCompat="@drawable/ic_copy" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="@dimen/_259sdp"
+        android:id="@+id/txt_title_description"
+        android:layout_width="@dimen/_268sdp"
         android:layout_height="@dimen/_20sdp"
         android:layout_marginTop="20dp"
-        android:text="@string/class_description"
+        android:text="@string/txt_title_description"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_title"
+        app:layout_constraintStart_toStartOf="@+id/img_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="@dimen/_259sdp"
+        android:id="@+id/txt_content_description"
+        android:layout_width="@dimen/_268sdp"
         android:layout_height="@dimen/_55sdp"
-        android:text="@string/text_class_description"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:text="@string/txt_content_description"
+        app:layout_constraintEnd_toEndOf="@+id/txt_title_description"
+        app:layout_constraintStart_toStartOf="@+id/txt_title_description"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_description" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="@dimen/_259sdp"
+        android:layout_width="@dimen/_268sdp"
         android:layout_height="wrap_content"
         app:tabSelectedTextColor="@color/tab_layout"
         app:tabIndicatorColor="@color/tab_layout"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintStart_toStartOf="@+id/txt_content_description"
+        app:layout_constraintTop_toBottomOf="@+id/txt_content_description">
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="@dimen/_259sdp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_268sdp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tabLayout"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"></androidx.viewpager.widget.ViewPager>
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
+    </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

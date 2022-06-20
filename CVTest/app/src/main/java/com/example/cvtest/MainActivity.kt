@@ -17,20 +17,20 @@ class MainActivity : AppCompatActivity() {
         tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         viewPager = findViewById<ViewPager>(R.id.viewPager)
 
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Bulletin"))
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Activities"))
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Members"))
-        tabLayout!!.addTab(tabLayout!!.newTab().setText("Pendings"))
-        tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
+        tabLayout.addTab(tabLayout.newTab().setText("Bulletin"))
+        tabLayout.addTab(tabLayout.newTab().setText("Activities"))
+        tabLayout.addTab(tabLayout.newTab().setText("Members"))
+        tabLayout.addTab(tabLayout.newTab().setText("Pendings"))
+        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = MyAdapter(this, supportFragmentManager, tabLayout!!.tabCount)
-        viewPager!!.adapter = adapter
+        val adapter = TablayoutAdapter(supportFragmentManager, tabLayout.tabCount)
+        viewPager.adapter = adapter
 
-        viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
-        tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
-                viewPager!!.currentItem = tab.position
+                viewPager.currentItem = tab.position
             }
             override fun onTabUnselected(tab: TabLayout.Tab) {
 
